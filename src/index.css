@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #0B0708;
+    color: #F7EFE6;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: 0.04em;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0708;
+}
+::-webkit-scrollbar-thumb {
+  background: #2D1418;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C5222E;
+}
+
+/* Subtle editorial vignette and noise feel */
+.editorial-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+.crimson-glow {
+  background: radial-gradient(circle, rgba(168, 24, 38, 0.45) 0%, rgba(88, 15, 21, 0.25) 50%, rgba(11, 7, 8, 0) 75%);
+}
+
+.crimson-disc {
+  background: radial-gradient(circle at 45% 45%, #9B1622 0%, #680E18 45%, #35080C 85%);
+  box-shadow: 0 0 80px rgba(168, 24, 38, 0.35);
+}
